@@ -1,5 +1,7 @@
 package ru.kpfu.itis.j903.cw.minsafin.inf_3.iterators;
 
+import ru.kpfu.itis.j903.cw.minsafin.inf_3.CanNotRemoveThisElementException;
+
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.NoSuchElementException;

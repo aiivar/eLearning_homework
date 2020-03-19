@@ -1,5 +1,7 @@
 package ru.kpfu.itis.j903.cw.minsafin.inf_2;
 
+import ru.kpfu.itis.j903.cw.minsafin.inf_1.Book;
+
 import java.util.Comparator;
 
 public class BookAuthorComparator implements Comparator<Book> {
