@@ -104,7 +104,7 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
 
     @Override
     public Iterator<T> iterator() {
-        return new MyNavSetIterator<T>(data);
+        return data.iterator();
     }
 
     @Override

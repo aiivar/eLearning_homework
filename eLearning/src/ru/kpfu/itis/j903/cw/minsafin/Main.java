@@ -9,8 +9,8 @@ public class Main {
         myNavSetTest();
     }
 
-    public static void myNavSetTest(){
-        MyNavigableSet<Integer> set= new MyNavigableSet<>(new IntComparator());
+    public static void myNavSetTest() {
+        MyNavigableSet<Integer> set = new MyNavigableSet<>(new IntComparator());
         set.add(3);
         set.add(2);
         set.add(5);
@@ -18,5 +18,8 @@ public class Main {
         System.out.println(set);
         System.out.println(set.headSet(5));
         System.out.println(set.descendingSet());
+        set.remove(1);
+        set.remove(5);
+        System.out.println(set);
     }
 }
