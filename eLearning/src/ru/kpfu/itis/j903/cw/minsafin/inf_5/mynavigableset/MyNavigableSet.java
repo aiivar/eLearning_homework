@@ -31,7 +31,6 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
         if (contains(t)) {
             return false;
         }
-        int i = 0;
         for (T e : data) {
             if (comparator.compare(e, t) > 0) {
                 data.add(data.indexOf(e), t);

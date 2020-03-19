@@ -2,11 +2,12 @@ package ru.kpfu.itis.j903.cw.minsafin;
 
 import ru.kpfu.itis.j903.cw.minsafin.inf_5.mynavigableset.IntComparator;
 import ru.kpfu.itis.j903.cw.minsafin.inf_5.mynavigableset.MyNavigableSet;
+import ru.kpfu.itis.j903.cw.minsafin.inf_8.InputOutputTest;
 
 public class Main {
 
     public static void main(String[] args) {
-        myNavSetTest();
+        IOTest();
     }
 
     public static void myNavSetTest() {
@@ -21,5 +22,10 @@ public class Main {
         set.remove(1);
         set.remove(5);
         System.out.println(set);
+    }
+
+    public static void IOTest(){
+        InputOutputTest inputOutputTest = new InputOutputTest();
+        inputOutputTest.execute();
     }
 }
