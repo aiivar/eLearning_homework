@@ -5,7 +5,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class InputOutputTest {
-    private final String path = "D:\\IdeaProjects\\1_Course\\2_Sem\\eLearning\\src\\ru\\kpfu\\itis\\j903\\cw\\minsafin\\inf_8\\filepath\\test.txt";
+    private final String path = "src\\ru\\kpfu\\itis\\j903\\cw\\minsafin\\inf_8\\filepath\\test.txt";
 
     public void execute() {
         File file = new File(path);
