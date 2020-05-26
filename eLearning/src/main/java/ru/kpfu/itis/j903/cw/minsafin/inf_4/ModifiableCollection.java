@@ -2,10 +2,7 @@ package ru.kpfu.itis.j903.cw.minsafin.inf_4;
 
 import ru.kpfu.itis.j903.cw.minsafin.inf_3.iterators.ModifiableCollectionIterator;
 
-import java.util.AbstractCollection;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
+import java.util.*;
 
 
 public class ModifiableCollection<T> extends AbstractCollection<T> {
@@ -22,8 +19,7 @@ public class ModifiableCollection<T> extends AbstractCollection<T> {
 
     @Override
     public boolean add(T t) {
-        data.add(t);
-        return true;
+        return data.add(t);
     }
 
     @Override
@@ -39,5 +35,18 @@ public class ModifiableCollection<T> extends AbstractCollection<T> {
     @Override
     public int size() {
         return data.size();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ModifiableCollection<?> that = (ModifiableCollection<?>) o;
+        return Objects.equals(data, that.data);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(data);
     }
 }

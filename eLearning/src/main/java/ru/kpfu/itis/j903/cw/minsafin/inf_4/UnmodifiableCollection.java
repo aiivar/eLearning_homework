@@ -4,6 +4,7 @@ import ru.kpfu.itis.j903.cw.minsafin.inf_3.iterators.UnmodifiableCollectionItera
 
 
 import java.util.AbstractCollection;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
 
@@ -33,5 +34,18 @@ public class UnmodifiableCollection<T> extends AbstractCollection<T> {
     @Override
     public int size() {
         return data.length;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        UnmodifiableCollection<?> that = (UnmodifiableCollection<?>) o;
+        return Arrays.equals(data, that.data);
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(data);
     }
 }

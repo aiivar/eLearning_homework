@@ -1,5 +1,7 @@
 package ru.kpfu.itis.j903.cw.minsafin.inf_2.numberwithgenerics;
 
+import java.util.Objects;
+
 public class ComplexNumber implements Number<ComplexNumber> {
     private double re;
     private double im;
@@ -49,5 +51,19 @@ public class ComplexNumber implements Number<ComplexNumber> {
                 "re=" + re +
                 ", im=" + im +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ComplexNumber that = (ComplexNumber) o;
+        return Double.compare(that.re, re) == 0 &&
+                Double.compare(that.im, im) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(re, im);
     }
 }

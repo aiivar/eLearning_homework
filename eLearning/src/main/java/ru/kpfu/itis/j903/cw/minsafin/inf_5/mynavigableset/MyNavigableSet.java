@@ -24,18 +24,22 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
 
     @Override
     public boolean add(T t) {
-        if (data.size() == 0) {
-            data.add(t);
-            return true;
-        }
-        if (contains(t)) {
-            return false;
-        }
-        for (T e : data) {
-            if (comparator.compare(e, t) > 0) {
-                data.add(data.indexOf(e), t);
+        if (t != null) {
+            if (data.size() == 0) {
+                data.add(t);
                 return true;
             }
+            if (contains(t)) {
+                return false;
+            }
+            for (T e : data) {
+                if (comparator.compare(e, t) > 0) {
+                    data.add(data.indexOf(e), t);
+                    return true;
+                }
+            }
+        }else {
+            return false;
         }
         data.add(t);
         return true;
